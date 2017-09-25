@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: howdy-api
+zuul:
+  routes:
+    howdy-boot:
+      path: /names/**
+      stripPrefix: false
+      url: https://howdy-boot.cfapps.io
+    howdy-kotlin:
+      path: /address/**
+      stripPrefix: false
+      url: https://howdy-kotlin.cfapps.io
+    howdy-nodejs:
+      path: /crypto/**
+      stripPrefix: false
+      url: https://howdy-nodejs.cfapps.io
+    howdy-python:
+      path: /int/**
+      stripPrefix: false
+      url: https://howdy-python.cfapps.io
