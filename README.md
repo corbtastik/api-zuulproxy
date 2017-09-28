@@ -17,3 +17,5 @@ See:
 ``src/main/resources/application.yml``
 
 For API endpoints being proxied.
+
+Uses Spring Cloud Zuul to proxy all the Howdy apps above and bring them under the same API umbrella. This demonstrates how you can pull together microservices implemented in different languages, each exposing a different part of an API.
