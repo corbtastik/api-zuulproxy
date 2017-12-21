@@ -1,6 +1,6 @@
 applications:
-- name: corbs-casa
-  host: corbs-casa
+- name: api
+  random-route: true
   instances: 1
   memory: 1G
-  path: target/api-gateway-0.0.1-SNAPSHOT.jar
+  path: target/api-zuulproxy-0.0.1-SNAPSHOT.jar
