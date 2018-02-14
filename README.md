@@ -4,11 +4,11 @@ The purpose of this project is to front several microservices implemented in dif
 
 This demo provides an API front to the following microservices:
 
-[howdy-akka](https://github.com/corbtastik/howdy-akka)
-[howdy-boot](https://github.com/corbtastik/howdy-boot)
-[howdy-nodejs](https://github.com/corbtastik/howdy-nodejs)
-[howdy-kotlin](https://github.com/corbtastik/howdy-kotlin)
-[howdy-python](https://github.com/corbtastik/howdy-python)
+* [howdy-akka](https://github.com/corbtastik/howdy-akka)
+* [howdy-boot](https://github.com/corbtastik/howdy-boot)
+* [howdy-nodejs](https://github.com/corbtastik/howdy-nodejs)
+* [howdy-kotlin](https://github.com/corbtastik/howdy-kotlin)
+* [howdy-python](https://github.com/corbtastik/howdy-python)
 
 1. Clone the microservice repos above
 1. If nessesary build each project (akka, boot and kotlin)
