@@ -1,6 +1,11 @@
 applications:
-- name: api
-  random-route: true
-  instances: 1
+- name: howdy-api
+  host: howdy
   memory: 1G
   path: target/api-zuulproxy-0.0.1-SNAPSHOT.jar
+  env:
+    APPS_SPRINGBOOT_URL: https://howdy-boot.cfapps.io
+    APPS_KOTLIN_URL: https://howdy-kotlin.cfapps.io
+    APPS_NODEJS_URL: https://howdy-nodejs.cfapps.io
+    APPS_PYTHON_URL: https://howdy-python.cfapps.io
+    APPS_AKKA_URL: https://howdy-akka.cfapps.io

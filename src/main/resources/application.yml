@@ -4,18 +4,17 @@ spring:
 zuul:
   routes:
     howdy-boot:
-      path: /names/**
-      stripPrefix: false
-      url: https://howdy-boot.cfapps.io
+      path: /springboot/**
+      url: ${apps.springboot.url}
     howdy-kotlin:
-      path: /address/**
-      stripPrefix: false
-      url: https://howdy-kotlin.cfapps.io
+      path: /kotlin/**
+      url: ${apps.kotlin.url}
     howdy-nodejs:
-      path: /crypto/**
-      stripPrefix: false
-      url: https://howdy-nodejs.cfapps.io
+      path: /nodejs/**
+      url: ${apps.nodejs.url}
     howdy-python:
-      path: /int/**
-      stripPrefix: false
-      url: https://howdy-python.cfapps.io
+      path: /python/**
+      url: ${apps.python.url}
+    howdy-akka:
+      path: /akka/**
+      url: ${apps.akka.url}
