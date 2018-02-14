@@ -15,7 +15,7 @@ This demo provides an API front to the following microservices:
 1. Login to Cloud Foundry ([Pivotal Web Services](https://run.pivotal.io/) is an excellent choice)
 1. cf push each microservice (you may need to specify random-route in manifest.yml)
 1. Record the end-point for each microservice
-1. Clone this repo
+1. Clone [this repo](https://github.com/corbtastik/api-zuulproxy)
 1. Add the end-point(s) into manifest.yml
 1. Build ./mvnw clean package
 1. cf push (you may need to specify random-route in manifest.yml)
@@ -25,10 +25,10 @@ Test calls after everything ^^^ is cf push'd
 
 and I recommend [HTTPie](https://httpie.org/) which is used below as 'http'
 
-``
+```
 http howdy.cfapps.io/akka/users
 http howdy.cfapps.io/springboot/names
 http howdy.cfapps.io/nodejs/howdy
 http howdy.cfapps.io/kotlin/address
 http howdy.cfapps.io/python/int
-``
+```
