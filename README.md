@@ -1,6 +1,6 @@
 ## A Zuul Based API Proxy
 
-The purpose of this project is to front several microservices implemented in different languages running in cloud foundry.  One of the benifites of microservices is the power of choice.  If you're a java geek then use java, python hey go for it, kotlin even better!  Use what you and your team are comfortable with.  The thing is...the more you use the harder it becomes to operationalize.  Enter Cloud Foundry...it helps provide developer choice yet maintain operational sanity.
+The purpose of this project is to front several microservices implemented in different languages running in cloud foundry.  One of the benefits of microservices is the power of choice.  If you're a java geek then use java, python...hey go for it, kotlin even better!  Use what you and your team are comfortable with.  The thing is...the more you choose and use the harder it becomes to operationalize.  Enter Cloud Foundry...it helps provide developer choice yet maintain operational sanity...and sanity is important.
 
 This demo provides an API front to the following microservices:
 
@@ -10,7 +10,6 @@ This demo provides an API front to the following microservices:
 [howdy-kotlin](https://github.com/corbtastik/howdy-kotlin)
 [howdy-python](https://github.com/corbtastik/howdy-python)
 
-1. Clone this repo
 1. Clone the microservice repos above
 1. If nessesary build each project (akka, boot and kotlin)
 1. Login to Cloud Foundry ([Pivotal Web Services](https://run.pivotal.io/) is an excellent choice)
@@ -22,16 +21,14 @@ This demo provides an API front to the following microservices:
 1. cf push (you may need to specify random-route in manifest.yml)
 1. test calls through the api-proxy
 
+Test calls after everything ^^^ is cf push'd
 
-Then clone and run the proxy
+and I recommend [HTTPie](https://httpie.org/) which is used below as 'http'
 
-./mvnw spring-boot:run
-
-Test the APIs with curl
-
-See:
-``src/main/resources/application.yml``
-
-For API endpoints being proxied.
-
-Uses Spring Cloud Zuul to proxy all the Howdy apps above and bring them under the same API umbrella. This demonstrates how you can pull together microservices implemented in different languages, each exposing a different part of an API.
+``
+http howdy.cfapps.io/akka/users
+http howdy.cfapps.io/springboot/names
+http howdy.cfapps.io/nodejs/howdy
+http howdy.cfapps.io/kotlin/address
+http howdy.cfapps.io/python/int
+``
