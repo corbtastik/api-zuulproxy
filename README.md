@@ -1,6 +1,6 @@
-## A Zuul Based API Proxy
+## A demo of Cloud Foundry's polyglot runtime
 
-The purpose of this project is to front several microservices implemented in different languages running in cloud foundry.  One of the benefits of microservices is the power of choice.  If you're a java geek then use java, python...hey go for it, kotlin even better!  Use what you and your team are comfortable with.  The thing is...the more you choose and use the harder it becomes to operationalize.  Enter Cloud Foundry...it helps provide developer choice yet maintain operational sanity...and sanity is important.
+The purpose of this project is to front several microservices implemented in different languages running in cloud foundry.  One of the benefits of microservices is the power of choice.  If you're a java geek then use java, python...hey go for it, kotlin even better!  Use what you and your team are comfortable with.  The thing is...the more you vary the harder it becomes to operationalize but such things don't need to plague us in the 21st century.  Enter Cloud Foundry...it helps provide developer choice yet maintain operational sanity...and sanity is important.
 
 This demo provides an API front to the following microservices:
 
